@@ -11,7 +11,6 @@ try:
     import keyboard
     import numpy as np
     from fancycon import *
-    import asd
 except:
     subprocess.run("pip install -r requirements.txt", shell=True)
     import os
@@ -47,7 +46,7 @@ def title():
     title = Colorate.Diagonal(Colors.DynamicMIX((VALID_COLOR_PRESETS[config["menu_color"]], VALID_COLOR_PRESETS["neon_" + config["menu_color"]])), title)
     print(title)
 
-def config():
+def getconfig():
     global config
     try:
         with open(f"{os.getcwd()}\\config.json", "r") as f:
@@ -64,7 +63,8 @@ def config():
                 "color": [237,3,205]
             },
             "keybinds": {
-                "exit": "q"
+                "exit": "q",
+                "reload": "r"
             }
         }
         
@@ -142,7 +142,7 @@ def get_move(coord_list, cursor_coords, strength):
     
     
 if __name__ == "__main__":
-    config = config()
+    config = getconfig()
     keybinds = config["keybinds"]
     aim_assist = config["aim_assist"]
     setcolors(config["menu_color"])
@@ -160,4 +160,10 @@ if __name__ == "__main__":
             cv2.destroyAllWindows()
             exit()
             
+        if (cv2.waitKey(1) & 0xFF == ord(keybinds['reload'])) or keyboard.is_pressed(keybinds['reload']):
+            normalprint("info", "main", "Reloading config")
+            config = getconfig()
+            time.sleep(1)
+            normalprint("info", "main", "Config reloaded")
+        
         xy_coords.clear()
