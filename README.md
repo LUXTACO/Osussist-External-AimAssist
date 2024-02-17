@@ -5,7 +5,6 @@
 </p>
 
 ----
-
 ### <p align="center">🤖 Osussist 🤖</p>
 <br>
 
@@ -39,14 +38,6 @@
 </p>
 
 ----
-### <p align="center">📦 Contribute 📦</p>
-<br>
-
-<p align="">
-  Osussist is an open source project and welcomes contributions from anyone who is interested. If you want to help improve the tool, you can fork this repository and make a pull request with your changes. You can also report any issues or suggestions [here](https://example.com).
-</p>
-
-----
 ### <p align="center">⛑ How it works ⛑</p>
 <br>
 
@@ -58,9 +49,28 @@
   Doing so will activate the aim assist and help you hit the circles. You can adjust the settings in the config file to customize the aim assist to your preference.
 </p>
 
+<p align="center">
+  <img src="./media/bot1.png" style="width: 70%; height: auto;">
+</p>
+<p align="center">
+  <img src="./media/bot2.png" style="width: 70%; height: auto;">
+</p>
+<p align="center">
+  <img src="./media/bot3.png" style="width: 70%; height: auto;">
+</p>
+
 -----
+### <p align="center">📦 Contribute 📦</p>
+<br>
+
+<p align="">
+  Osussist is an open source project and welcomes contributions from anyone who is interested. If you want to help improve the tool, you can fork this repository and make a pull request with your changes. You can also report any issues or suggestions on the issues tab.
+</p>
+
+----
 
 ### <p align="center">📌 Disclaimer 📌</p>
+<br>
 
 <p align="">
     Please use this program only for educational purposes.
@@ -70,7 +80,3 @@
 </p>
 
 -----
-
-## License
-
-Osussist is licensed under the MIT License. See the LICENSE file for more details.
