@@ -18,6 +18,56 @@
 
 ### <p align="center">🧬 Installation 🧬</p>
 
+<p align="center">
+  Install Node: If you don't have Node installed, download and install it from the official Node website (https://nodejs.org).
+  <br><br>
+  Install required libraries: The script relies on several external libraries. You can install them using npm, the Node Package Manager. Open a terminal or command prompt and run the following command:
+</p>
+
+```node
+npm install 
+```
+
+<p align="center">
+  This will install the necessary libraries for running the script.
+</p>
+
+----
+### <p align="center">⛑ How it works ⛑</p>
+<p align="center">
+    1. The script initializes a Minecraft bot using the Mineflayer library and loads essential plugins for PvP and pathfinding.
+    <br><br>
+    2. It listens for user input, including commands like "!follow," "!minefor," "!defend," and more, issued by the bot owner in the Minecraft chat.
+    <br><br>
+    3. When the owner issues commands, the bot carries out corresponding actions, such as following the owner, mining specific blocks, defending against nearby entities, and more.
+    <br><br>
+    4. The bot provides status updates when requested, including health, food, armor, and experience points.
+    <br>
+</p>
+
+  <p align="center">
+    <img src="./media/bot1.png" style="width: 70%; height: auto;">
+  </p>
+    <p align="center">
+    <img src="./media/bot2.png" style="width: 70%; height: auto;">
+  </p>
+    <p align="center">
+    <img src="./media/bot3.png" style="width: 70%; height: auto;">
+  </p>
+
+-----
+
+### <p align="center">📌 Disclaimer 📌</p>
+
+<p align="center">
+    Please use this program only for educational purposes.
+    <br><br>
+    It is not meant to be used in any malicious way, and I decline any responsibility for what you do with it.
+    <br><br>
+</p>
+
+-----
+
 **Python Script:**
 
  - For the python script you just need to start it and the libraries should auto download.
