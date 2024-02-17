@@ -28,6 +28,7 @@
   <strong>Osu:</strong>
   
   - For osu you will need an skin which should be included inside the skin folder.
+  - Zip the contents of *"osu_skin"* and rename from .zip to .osk
   - Once you have the skin you need to drag it into the osu window and it should install and equip it!
   
   <strong>Extras:</strong>
