@@ -3,3 +3,5 @@ dxcam
 pywin32
 keyboard
 numpy
+pystyle
+tabulate
