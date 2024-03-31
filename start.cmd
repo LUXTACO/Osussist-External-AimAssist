@@ -1,1 +1,2 @@
 python osu.py
+pause

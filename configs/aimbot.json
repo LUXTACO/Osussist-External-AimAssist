@@ -1,0 +1,42 @@
+{
+    "menu_color": "pastel_pink",
+    "aim_assist": {
+        "enabled": true,
+        "min_area": 10,
+        "strength": 0.17999999999999994,
+        "range": 1000,
+        "compute": "cpu"
+    },
+    "detection": {
+        "cursor": [
+            221,
+            50,
+            50
+        ],
+        "hitcircle": [
+            237,
+            3,
+            205
+        ]
+    },
+    "visuals": {
+        "cursor": {
+            "enabled": true,
+            "color": [
+                221,
+                50,
+                50
+            ],
+            "thickness": 2
+        },
+        "hitcircle": {
+            "enabled": true,
+            "color": [
+                237,
+                3,
+                205
+            ],
+            "thickness": 2
+        }
+    }
+}
