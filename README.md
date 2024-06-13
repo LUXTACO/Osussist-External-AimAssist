@@ -75,6 +75,7 @@
     <br><br>
     It is not meant to be used in any malicious way, and I decline any responsibility for what you do with it.
     <br><br>
+    Also please learn how to use your computer before dming or making a github issue, if you ask for stuff like "whats the cheat directory" I WILL NOT help you.
 </p>
 
 -----
