@@ -9,9 +9,15 @@
 <br>
 
 <p align="" >
-  Before you read anything else, If you are looking for the <strong>FULL IN DEPTH</strong> explanation on how it works check out my <a href="https://youtube.com/@takkeshi_dev">channel</a> in which Ill try to upload the in depth explanation of most of my scripts also make sure to join the <a href="https://discord.gg/PdeTUZ3M62">discord</a>!
+  Before you read anything else, If you are looking for the <strong>FULL IN DEPTH</strong> explanation on how it works check out my <a href="https://youtube.com/@takkeshi_dev">channel</a> in which Ill try to upload the in depth explanation of most of my scripts!
   <br><br>
   Osussist is a tool that provides real-time aim assistance for the rhythm game osu. It is fully undetectable by the osu anti-cheat and open source, so you can see how it works and even make it better if you want.
+</p>
+
+<p align="center" >
+  <b> >>> JOIN THE DISCORD <<< </b>
+    <br>
+  https://discord.gg/PdeTUZ3M62
 </p>
 
 ----
