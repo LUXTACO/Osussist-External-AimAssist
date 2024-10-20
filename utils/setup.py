@@ -8,8 +8,6 @@ LIBRARIES = {
     "pywin32": "win32gui", 
     "keyboard": "keyboard", 
     "numpy" : "numpy",
-    "numba": "numba",
-    "https://github.com/qb-0/pyMeow/releases/download/1.53.36/pyMeow-1.53.36.zip": "pyMeow",
     ######## *Gui.py Libs ######## 
     "customtkinter": "customtkinter",
     "pillow": "PIL",
