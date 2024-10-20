@@ -1,7 +1,6 @@
 import utils.setup as setup
 
 try:
-    import pyMeow as pm
     import utils.gui as gui
     from utils.fancycon import *
     import utils.linker as linker
@@ -15,7 +14,6 @@ try:
     import win32api
     import keyboard
     import threading
-    import numba as nb
     import numpy as np
     from queue import Queue
     from threading import Thread
@@ -23,7 +21,6 @@ except:
     setup.installdeps()
     
     import utils.gui as gui
-    import utils.pyMeow as pm
     from utils.fancycon import *
     import utils.linker as linker
     
@@ -36,7 +33,6 @@ except:
     import win32api
     import keyboard
     import threading
-    import numba as nb
     import numpy as np
     from queue import Queue
     from threading import Thread
@@ -121,40 +117,6 @@ class cpu:
                 normalprint("error", "get_move", f"Target too far away: {closest_coord[0]}, {closest_coord[1]}")
                 pass
 
-class gpu:
-    
-    @nb.jit(parallel=True, fastmath=True)
-    def get_move(coord_list, cursor_coords, strength, rangeVar):
-
-        try:
-            if len(coord_list) == 0:
-                return
-            
-            closest_coord = None
-            closest_coord_distance = None
-            for coord in coord_list:
-                distance = np.sqrt((coord[0] - cursor_coords[0])**2 + (coord[1] - cursor_coords[1])**2)
-                if closest_coord_distance == None:
-                    closest_coord_distance = distance
-                    closest_coord = coord
-                elif distance < closest_coord_distance:
-                    closest_coord_distance = distance
-                    closest_coord = coord
-                    
-            if closest_coord != None:
-                x_diff = round((closest_coord[0] - cursor_coords[0]) * strength)
-                y_diff = round((closest_coord[1] - cursor_coords[1]) * strength)
-                normalprint("info", "get_move", f"X diff: {x_diff} Y diff: {y_diff}")
-                
-                if np.sqrt((closest_coord[0] - cursor_coords[0])**2 + (closest_coord[1] - cursor_coords[1])**2) <= int(rangeVar):
-                    return x_diff, y_diff
-                    normalprint("warning", "get_move", f"Moving mouse to: {closest_coord[0]}, {closest_coord[1]}")
-                else:
-                    normalprint("error", "get_move", f"Target too far away: {closest_coord[0]}, {closest_coord[1]}")
-                    pass
-        except:
-            pass
-
 if __name__ == "__main__":
     queue = Queue()
     
@@ -170,8 +132,9 @@ if __name__ == "__main__":
     value_thread.start()
     
     if aim_settings["compute"] == "gpu":
-        normalprint("warning", "main", "Using GPU acceleration for aim assist, not fully tested!")
+        normalprint("error", "main", "Removed due to it not working properly")
         time.sleep(5)
+        exit()
     
     while True:
         
@@ -182,9 +145,4 @@ if __name__ == "__main__":
         if aim_settings["enabled"]:
             if not gui_focus:
                 xy_coords, cursor_coords, objectives, cursor = osu.scan_screen(frame, detection_settings["hitcircle"], detection_settings["cursor"], aim_settings["min_area"])
-                
-                if aim_settings["compute"] == "gpu":
-                    x_diff, y_diff = gpu.get_move(xy_coords, cursor_coords, aim_settings["strength"], aim_settings["range"])
-                    win32api.mouse_event(win32con.MOUSEEVENTF_MOVE, x_diff, y_diff, 0, 0)
-                else:
-                    cpu.get_move(xy_coords, cursor_coords, aim_settings["strength"], aim_settings["range"])
+                cpu.get_move(xy_coords, cursor_coords, aim_settings["strength"], aim_settings["range"])
